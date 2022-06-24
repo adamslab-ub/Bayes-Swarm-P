@@ -4,3 +4,4 @@ matplotlib
 pyswarm
 sklearn
 Gpy
+pybullet

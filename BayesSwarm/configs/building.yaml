@@ -1,0 +1,9 @@
+# Camera Settings
+camera_distance: 253
+camera_yaw: -1.12
+camera_pitch: -14.33
+camera_target_position: [0, 83, 0]
+
+rotation_vector: [90, 0, 0] 
+scale_factor: 0.1
+env_file: "BayesSwarm/object_files/Indoor3.obj"

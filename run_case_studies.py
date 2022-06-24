@@ -4,6 +4,7 @@
 
 import numpy as np 
 from BayesSwarm.simulator import Simulator
+from BayesSwarm.types import SimulationConfigs
 
 import scipy.io
 
@@ -12,7 +13,15 @@ def main():
     debug = False
     case_study = 76
     decision_making_mode = "bayes-swarm" # "bayes-swarm"
-    
+    simulation_mode = " "  # Options: "pybullet", " " 
+    if simulation_mode == "pybullet":
+        simulation_configs = SimulationConfigs(
+            simulation_mode="pybullet",
+            environment="mountain-1",
+            texture="source",
+            robot_type="uav")
+    else:
+        simulation_configs = SimulationConfigs()
     is_scout_team = False
     start_locations = None
     observation_frequency = 1
@@ -220,11 +229,11 @@ def main():
     else:
         raise("Invalid Case Study!")
 
-    sim = Simulator(n_robots=n_robots, source_id=source_id, start_locations=start_locations,\
-                    decision_making_mode=decision_making_mode, bayes_swarm_mode=bayes_swarm_mode,\
-                    filtering_mode=filtering_mode, observation_frequency=observation_frequency,\
-                    optimizers=optimizers, enable_full_observation=enable_full_observation,\
-                    is_scout_team=is_scout_team, debug=debug, time_profiling_enable=time_profiling_enable)
+    sim = Simulator(n_robots=n_robots, source_id=source_id, start_locations=start_locations,
+                    decision_making_mode=decision_making_mode, bayes_swarm_mode=bayes_swarm_mode,
+                    filtering_mode=filtering_mode, observation_frequency=observation_frequency,
+                    optimizers=optimizers, enable_full_observation=enable_full_observation, is_scout_team=is_scout_team,
+                    debug=debug, time_profiling_enable=time_profiling_enable, simulation_configs=simulation_configs)
     sim.run()
     sim.get_mission_metrics()
 

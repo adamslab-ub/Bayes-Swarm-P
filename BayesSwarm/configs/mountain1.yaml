@@ -1,0 +1,16 @@
+# Camera Settings
+camera_distance: 5
+camera_yaw: -174.2
+camera_pitch: -123.8
+camera_target_position: [2, 1.6, 0.2]
+
+# Environment Settings
+rotation_vector_robot: [90, 0, 0] 
+rotation_vector_env: [0, 0, 0] 
+origin_env: [-2.6,-2.6,0]
+scale_factor: 7
+env_file: "BayesSwarm/object_files/mesa_mountain.obj"
+
+# Robot Settings
+elevation_uav: 2.1
+elevation_ugv: .1

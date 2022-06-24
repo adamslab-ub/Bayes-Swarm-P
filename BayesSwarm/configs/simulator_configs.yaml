@@ -1,0 +1,3 @@
+env_type: "mountain-1" # mountain-1, plain, building
+texture_type: "source" # source, none
+robot_type: "uav" # ugv, uav
